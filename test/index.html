@@ -1,0 +1,22 @@
+<input id="input">
+<button onclick="add()">Add</button>
+<ul id="list-container">
+    <li>Hello
+         <button onclick="deleteiteam(event)">Delete</button>
+    </li>
+</ul>
+
+<script>
+   var ul=document.getElementById("list-container")
+   var input=document.getElementById("input")
+   function add(){
+    var listiteam=document.createElement("li")
+    listiteam.innerHTML=input.value +"<button onclick='deleteiteam(event)'>Delete</button>"
+    ul.append(listiteam)
+   }
+   function deleteiteam(event){
+     event.target.parentElement.remove()
+
+   }
+
+</script>
